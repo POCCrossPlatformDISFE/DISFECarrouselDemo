@@ -97,8 +97,7 @@
                 dataType: "html",
                 cache: true,               
                 beforeSend: function(request) {               
-                    request.setRequestHeader('Content-Type','text/html');
-                    request.setRequestHeader('Access-Control-Allow-Origin','https://disfecarrouseldemo.herokuapp.com/');
+                    request.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');                  
                 },
                 success: function(data) {
 
