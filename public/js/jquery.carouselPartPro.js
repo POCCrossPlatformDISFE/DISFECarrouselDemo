@@ -95,11 +95,10 @@
                 url : "https://disfelaposte.herokuapp.com",
                 type: "GET",
                 dataType: "html",
-                cache: true,
-                crossDomain : true,
-                // beforeSend: function(request) {               
-                //     request.setRequestHeader('Content-Type','multipart/form-data');
-                // },
+                cache: true,               
+                beforeSend: function(request) {               
+                    request.setRequestHeader('Content-Type','multipart/form-data');
+                },
                 success: function(data) {
 
                     console.log(data);
