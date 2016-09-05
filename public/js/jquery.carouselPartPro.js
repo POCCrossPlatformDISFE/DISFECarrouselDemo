@@ -96,9 +96,9 @@
                 type: "GET",
                 dataType: "html",
                 cache: true,
-
+                crossDomain : true,
                 beforeSend: function(request) {                  
-
+                    
                 },
                 success: function(data) {
 
