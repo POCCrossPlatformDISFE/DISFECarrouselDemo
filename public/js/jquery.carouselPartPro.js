@@ -98,7 +98,7 @@
                 cache: true,
                 crossDomain : true,
                 beforeSend: function(request) {               
-                    request.setRequestHeader('Access-Control-Allow-Origin','*');
+                    request.setRequestHeader('Content-Type','multipart/form-data');
                 },
                 success: function(data) {
 
