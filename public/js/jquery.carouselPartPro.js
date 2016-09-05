@@ -97,11 +97,8 @@
                 dataType: "html",
                 cache: true,
                 crossDomain : true,
-                beforeSend: function(request) {
-                    request.setRequestHeader('Access-Control-Allow-Credentials', 'true');
-                    request.setRequestHeader('Access-Control-Request-Headers','')
-                    request.setRequestHeader('Access-Control-Request-Method','GET');                  
-                    request.setRequestHeader('Access-Control-Allow-Origin','*');
+                beforeSend: function(request) {               
+                    request.setRequestHeader('Access-Control-Allow-Origin','https://disfecarrouseldemo.herokuapp.com');
                 },
                 success: function(data) {
 
