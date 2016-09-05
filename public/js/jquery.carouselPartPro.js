@@ -97,7 +97,7 @@
                 dataType: "html",
                 cache: true,               
                 beforeSend: function(request) {               
-                    request.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');                  
+                    request.setRequestHeader('Content-Type','text/plain');                  
                 },
                 success: function(data) {
 
@@ -132,7 +132,7 @@
                     $(".btn-group-control").html("");
                 },
                 error: function(xhr, status, error) {
-
+                    console.log(error);
                     deferred.reject("flux inaccessible");
 
                 },
