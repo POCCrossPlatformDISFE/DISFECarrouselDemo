@@ -83,6 +83,15 @@
                     </section>';
         }
 
+        function walkTheDOM(node, func) {
+            func(node);
+            node = node.firstChild;
+            while (node) {
+                walkTheDOM(node, func);
+                node = node.nextSibling;
+            }
+        }
+
         function getData() {
             // 
             var deferred = $.Deferred();
@@ -108,6 +117,12 @@
                     var doc = new DOMParser().parseFromString(data,'text/xml');
                    
                     var html = $.parseHTML(data);
+
+                    walkTheDOM(html, function (node) {
+                         console.log(node);
+                    });
+
+                    console.log(html);
                     console.log(html.getElementById("widget-carousel-content-particulier"));
 
 
