@@ -99,6 +99,9 @@
                 },
                 success: function(data) {
 
+                    data = data.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com');
+                    data = data.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
+                    
                     var containerFluidNode;
 
                     // console.log(data);
@@ -126,9 +129,7 @@
 
                     //we transform the domElement in string 
                     carrouselDOMStr = carrouselDOM.outerHTML;
-                   
-                    carrouselDOMStr = carrouselDOMStr.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com');
-                    carrouselDOMStr = carrouselDOMStr.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
+                                    
                   
                     $self.html('<section class="lp-slider lp-section"><div class="slider-container">'+carrouselDOMStr+'</div></section>');
 
@@ -179,7 +180,7 @@
         dataPromise.fail(function(ex) {
 
         $self.html('');
-        $self.html(templateLoadingError(eMessageHaut,eMessageBas,imgError,eMessagetextColor)); 
+        $self.html(templateLoadingError(eMessageHaut,eMessageBas,imgerr,eMessagetextColor)); 
         $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
 
                             navigation: false, // Show next and prev buttons
