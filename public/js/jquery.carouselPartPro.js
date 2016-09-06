@@ -121,7 +121,7 @@
                     html.forEach(function(node) {
                         var branch = $(node).find('#carousel-'+settings.typeUser);
                        if(branch.length >0){
-                            carouselDOM = branch;
+                            carouselDOM = branch[0];
                        }
                     }, this);
                   
