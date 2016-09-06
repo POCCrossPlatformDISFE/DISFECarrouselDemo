@@ -101,9 +101,11 @@
                 },
                 success: function(data) {
 
-                    $('#tmp-content').html(data);
-
-                    //var html = $.parseHTML(data);
+                  
+                    console.log(data);
+                    var html = $.parseHTML(data);
+                    console.log(html);
+                    
                     // var xmlString = data
                     // , parser = new DOMParser()
                     // , doc = parser.parseFromString(xmlString, "text/xml");
