@@ -135,7 +135,7 @@
                     xmlDoc = $.parseXML(carrouselDOM);
                                
                     
-                    console.log(carrouselDOM.toString());
+                    console.log(carrouselDOM.outerHTML);
 
                     // //Fill div with results
                     // var dataFormatted = data;
