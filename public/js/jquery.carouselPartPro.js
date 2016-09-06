@@ -103,7 +103,7 @@
 
                     var containerFluidNode;
 
-                    console.log(data);
+                    // console.log(data);
                     var html = $.parseHTML(data);                    
                     html.forEach(function(element) {
                         if(element.className){
@@ -125,7 +125,7 @@
                     var node = XpathResult.iterateNext();
                     while(node) {
                         console.log(node.id);
-                        node = result.iterateNext();
+                        node = XpathResult.iterateNext();
                     }
 
                     //Fill div with results
