@@ -132,20 +132,13 @@
                         node = XpathResult.iterateNext();
                     }
 
-                    xmlDoc = $.parseXML(carrouselDOM);
-                               
-                    
-                    console.log(carrouselDOM.outerHTML);
-
-                    // //Fill div with results
-                    // var dataFormatted = data;
-                    // dataFormatted = dataFormatted.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
-                    // dataFormatted = dataFormatted.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
-                    // xmlDoc = $.parseXML(dataFormatted),
-                    //     xml = $(xmlDoc),
-                    //     result = xml.find("results").html();
-                    //$self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + result + '</div></div></section>');
-                    $self.html('<section class="lp-slider lp-section"><div class="slider-container">+'+carrouselDOM+'+</div></section>');
+                    //we transform the domElement in string 
+                    carrouselDOM = carrouselDOM.outerHTML;
+                   
+                    carrouselDOM = carrouselDOM.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
+                    carrouselDOM = carrouselDOM.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
+                  
+                    $self.html('<section class="lp-slider lp-section"><div class="slider-container">+'+carrouselDOM.outerHTML+'+</div></section>');
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
 
