@@ -125,7 +125,7 @@
                        }
                     }, this);
                   
-                    $self.html(carouselDOM.innerhtml);
+                    $self.html(carouselDOM.innerHTML);
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
 
