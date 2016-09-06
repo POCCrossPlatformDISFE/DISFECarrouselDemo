@@ -120,8 +120,10 @@
                     console.log(html)
                     
                     html.forEach(function(node) {
-                        var toto = node.find('#carousel-particulier');
-                        console.log(toto);
+                        var toto = $(node).find('#carousel-particulier');
+                       if(toto.length >0){
+                           console.log(toto);
+                       }
                     }, this);
 
            
