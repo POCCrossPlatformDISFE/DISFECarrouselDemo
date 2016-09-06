@@ -131,21 +131,21 @@
                     console.log($self.html());
                     $self.html(carouselDOM.innerHTML);
 
-                    // $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
-
-                    //     navigation: false, // Show next and prev buttons
-                    //     slideSpeed: 500,
-                    //     paginationSpeed: 400,
-                    //     loop: true,
-                    //     baseClass: "owl-carousel",
-                    //     rewindNav: true,
-                    //     scrollPerPage: false,
-                    //     autoPlay: 5000,
-                    //     pagination: true,
-                    //     transitionStyle: "fade",
-                    //     theme: "owl-theme",
-                    //     singleItem: true
-                    // });
+                    $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
+                        addClassActive : true,
+                        navigation: false, // Show next and prev buttons
+                        slideSpeed: 500,
+                        paginationSpeed: 400,
+                        loop: true,
+                        baseClass: "owl-carousel",
+                        rewindNav: false,
+                        scrollPerPage: false,
+                        autoPlay: 5000,
+                        pagination: true,
+                        transitionStyle: "fade",
+                        theme: "owl-theme",
+                        singleItem: true
+                    });
 
 
                     $(".btn-group-control").html("");
