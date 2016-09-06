@@ -104,7 +104,7 @@
                   
                     console.log(data);
                     var html = $.parseHTML(data);
-                    console.log(html);
+                    console.log(html['div.container-fluid']);
                     
                     // var xmlString = data
                     // , parser = new DOMParser()
