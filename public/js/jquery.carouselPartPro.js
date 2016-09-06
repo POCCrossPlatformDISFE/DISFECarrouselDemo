@@ -101,7 +101,9 @@
                 },
                 success: function(data) {
 
-                    console.log("SUCESS");
+                    console.log(data);
+                    console.log(typeof data);
+                    
                     //Fill div with results
                     var dataFormatted = data;
                     dataFormatted = dataFormatted.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
