@@ -122,10 +122,13 @@
                     // console.log(doc);
                     XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", containerFluidNode, null, XPathResult.ANY_TYPE, null);
                     
-                    console.log(XpathResult);
+                    var carrouselDOM;
+
                     var node = XpathResult.iterateNext();
                     while(node) {
-                        console.log(node);
+                        if(node){
+                            carrouselDOM = node;
+                        }
                         node = XpathResult.iterateNext();
                     }
 
