@@ -101,10 +101,19 @@
                 },
                 success: function(data) {
 
-                  
+                    var containerFluidNode;
+
                     console.log(data);
-                    var html = $.parseHTML(data);
-                    console.log(html['div.container-fluid']);
+                    var html = $.parseHTML(data);                    
+                    html.forEach(function(element) {
+                        if(element.className){
+                            if(element.className === 'container-fluid'){
+                                containerFluidNode = element;
+                            }
+                        }                      
+                    }, this);
+
+                    console.log(containerFluidNode);
                     
                     // var xmlString = data
                     // , parser = new DOMParser()
