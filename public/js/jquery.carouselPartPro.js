@@ -106,7 +106,7 @@
                     , parser = new DOMParser()
                     , doc = parser.parseFromString(xmlString, "text/xml");
                   
-                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.ANY_TYPE, null);
+                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.STRING_TYPE, null);
 
                     console.log(XpathResult.stringValue);
 
