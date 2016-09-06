@@ -140,7 +140,7 @@
                     //     xml = $(xmlDoc),
                     //     result = xml.find("results").html();
                     //$self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + result + '</div></div></section>');
-                    $self.html('<section class="lp-slider lp-section"><div class="slider-container">+'+node+'+</div></section>');
+                    $self.html('<section class="lp-slider lp-section"><div class="slider-container">+'+carrouselDOM+'+</div></section>');
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
 
