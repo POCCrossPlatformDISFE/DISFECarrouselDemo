@@ -120,7 +120,7 @@
                     
                     
                     html.forEach(function(node) {
-                        walkTheDOM(element, function (subNode) {
+                        walkTheDOM(node, function (subNode) {
                             console.log(subNode);
                         });
                     }, this);
