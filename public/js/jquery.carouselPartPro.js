@@ -101,7 +101,7 @@
                 },
                 success: function(data) {
 
-                    $('tmp-content').html(data);
+                    $('#tmp-content').html(data);
 
                     //var html = $.parseHTML(data);
                     // var xmlString = data
