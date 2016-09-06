@@ -108,6 +108,8 @@
                 },
                 success: function(data) {
 
+                    console.log(data);
+                    
                     data = data.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com');
                     data = data.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
 
@@ -124,7 +126,9 @@
                             carouselDOM = branch[0];
                        }
                     }, this);
-                  
+                    
+                    console.log(carouselDOM.innerHTML);
+
                     $self.html(carouselDOM.innerHTML);
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
