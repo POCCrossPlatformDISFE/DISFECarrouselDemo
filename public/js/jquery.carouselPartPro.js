@@ -117,22 +117,26 @@
                     var doc = new DOMParser().parseFromString(data,'text/xml');
                    
                     var html = $.parseHTML(data);
+                    
+                    
+                    html.forEach(function(node) {
+                        walkTheDOM(element, function (subNode) {
+                            console.log(subNode);
+                        });
+                    }, this);
 
-                    walkTheDOM(html, function (node) {
-                         console.log(node);
-                    });
+           
+
+
+                        // if(element.className){
+                        //     if(element.className === 'container-fluid'){
+                        //         containerFluidNode = element;
+                        //     }
+                        // }   
 
                     console.log(html);
                     console.log(html.getElementById("widget-carousel-content-particulier"));
 
-
-                    // html.forEach(function(element) {
-                    //     if(element.className){
-                    //         if(element.className === 'container-fluid'){
-                    //             containerFluidNode = element;
-                    //         }
-                    //     }                      
-                    // }, this);
 
 
                     XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.ANY_TYPE, null);
