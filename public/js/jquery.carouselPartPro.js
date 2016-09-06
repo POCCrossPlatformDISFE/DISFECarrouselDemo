@@ -117,13 +117,10 @@
                     var doc = new DOMParser().parseFromString(data,'text/xml');
                    
                     var html = $.parseHTML(data);
-                    
+                    console.log(html)
                     
                     html.forEach(function(node) {
-                        walkTheDOM(node, function (subNode) {
-                            console.log(subNode.id);
-                            console.log(subNode);
-                        });
+                        console.log(node);
                     }, this);
 
            
