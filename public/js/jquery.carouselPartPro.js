@@ -101,11 +101,12 @@
 
                     data = data.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com');
                     data = data.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
-                    
+
                     var containerFluidNode;
 
-                    // console.log(data);
-                    var html = $.parseHTML(data);                    
+                    console.log(data);
+                    var html = $.parseHTML(data);
+                    console.log(data);                    
                     html.forEach(function(element) {
                         if(element.className){
                             if(element.className === 'container-fluid'){
