@@ -101,13 +101,15 @@
                 },
                 success: function(data) {
 
+                    $('tmp-content').html(data);
+
                     //var html = $.parseHTML(data);
-                    var xmlString = data
-                    , parser = new DOMParser()
-                    , doc = parser.parseFromString(xmlString, "text/xml");
+                    // var xmlString = data
+                    // , parser = new DOMParser()
+                    // , doc = parser.parseFromString(xmlString, "text/xml");
                     
-                    console.log(doc);
-                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.ANY_TYPE, null);
+                    // console.log(doc);
+                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", document, null, XPathResult.ANY_TYPE, null);
 
                     var node = XpathResult.iterateNext();
                     while(node) {
