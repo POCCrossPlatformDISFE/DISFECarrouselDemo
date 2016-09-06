@@ -107,16 +107,16 @@
                     console.log(data);
                     var html = $.parseHTML(data);
                     console.log(data);                    
-                    html.forEach(function(element) {
-                        if(element.className){
-                            if(element.className === 'container-fluid'){
-                                containerFluidNode = element;
-                            }
-                        }                      
-                    }, this);
+                    // html.forEach(function(element) {
+                    //     if(element.className){
+                    //         if(element.className === 'container-fluid'){
+                    //             containerFluidNode = element;
+                    //         }
+                    //     }                      
+                    // }, this);
 
 
-                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", containerFluidNode, null, XPathResult.ANY_TYPE, null);
+                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", html, null, XPathResult.ANY_TYPE, null);
                     
                     var carrouselDOM;
 
