@@ -108,7 +108,11 @@
                   
                     XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.STRING_TYPE, null);
 
-                    console.log(XpathResult.stringValue);
+                    var node = XpathResult.iterateNext();
+                    while(node) {
+                        console.log(node.id);
+                        node = result.iterateNext();
+                    }
 
                     //Fill div with results
                     var dataFormatted = data;
