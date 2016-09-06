@@ -104,9 +104,11 @@
 
                     var containerFluidNode;
 
-                    console.log(data);
-                    var html = $.parseHTML(data);
-                    console.log(data);                    
+
+                    var doc = new DOMParser().parseFromString(data,'text/xml');
+                   
+                    //var html = $.parseHTML(data);
+                
                     // html.forEach(function(element) {
                     //     if(element.className){
                     //         if(element.className === 'container-fluid'){
@@ -116,7 +118,7 @@
                     // }, this);
 
 
-                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", html, null, XPathResult.ANY_TYPE, null);
+                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.ANY_TYPE, null);
                     
                     var carrouselDOM;
 
