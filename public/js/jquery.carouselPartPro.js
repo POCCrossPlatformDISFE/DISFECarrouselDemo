@@ -116,48 +116,16 @@
 
                     var doc = new DOMParser().parseFromString(data,'text/xml');
                    
-                    var html = $.parseHTML(data);
-                    console.log(html)
+                    var html = $.parseHTML(data);                  
                     
                     html.forEach(function(node) {
-                        var toto = $(node).find('#carousel-particulier');
-                       if(toto.length >0){
-                           console.log(toto);
+                        var branch = $(node).find('#carousel-'+settings.typeUser);
+                       if(branch.length >0){
+                            carouselDOM = branch;
                        }
                     }, this);
-
-           
-
-
-                        // if(element.className){
-                        //     if(element.className === 'container-fluid'){
-                        //         containerFluidNode = element;
-                        //     }
-                        // }   
-
-                    console.log(html);
-                    console.log(html.getElementById("widget-carousel-content-particulier"));
-
-
-
-                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.ANY_TYPE, null);
-                    console.log(doc);
-                    var carrouselDOM;
-
-                    var node = XpathResult.iterateNext();
-                    console.log(node);
-                    while(node) {
-                        if(node){
-                            carrouselDOM = node;
-                        }
-                        node = XpathResult.iterateNext();
-                    }
-
-                    //we transform the domElement in string 
-                    carrouselDOMStr = carrouselDOM.outerHTML;
-                                    
                   
-                    $self.html('<section class="lp-slider lp-section"><div class="slider-container">'+carrouselDOMStr+'</div></section>');
+                    $self.html(carouselDOM.innerhtml);
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
 
