@@ -100,9 +100,10 @@
                     request.setRequestHeader('Content-Type','text/plain');                  
                 },
                 success: function(data) {
-
+                    console.log(decodeURI("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22https%3A%2F%2Fwww.laposte.fr%2F%22%20and%20compat%3D%22html5%22%20and%20xpath%3D'%2F%2Fdiv%5B%40data-slide%5D'&format=xml&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"));
                     var html = $.parseHTML(data);
-                    console.log(html);
+                    var paragraphCount = document.evaluate( 'count(//p)', html, null, XPathResult.ANY_TYPE, null );
+
                     //Fill div with results
                     var dataFormatted = data;
                     dataFormatted = dataFormatted.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
