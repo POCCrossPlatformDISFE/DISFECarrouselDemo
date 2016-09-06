@@ -109,7 +109,7 @@
                 success: function(data) {
 
                     console.log(data);
-                    
+
                     data = data.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com');
                     data = data.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
 
@@ -128,24 +128,24 @@
                     }, this);
                     
                     console.log(carouselDOM.innerHTML);
-
+                    console.log($self.html());
                     $self.html(carouselDOM.innerHTML);
 
-                    $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
+                    // $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
 
-                        navigation: false, // Show next and prev buttons
-                        slideSpeed: 500,
-                        paginationSpeed: 400,
-                        loop: true,
-                        baseClass: "owl-carousel",
-                        rewindNav: true,
-                        scrollPerPage: false,
-                        autoPlay: 5000,
-                        pagination: true,
-                        transitionStyle: "fade",
-                        theme: "owl-theme",
-                        singleItem: true
-                    });
+                    //     navigation: false, // Show next and prev buttons
+                    //     slideSpeed: 500,
+                    //     paginationSpeed: 400,
+                    //     loop: true,
+                    //     baseClass: "owl-carousel",
+                    //     rewindNav: true,
+                    //     scrollPerPage: false,
+                    //     autoPlay: 5000,
+                    //     pagination: true,
+                    //     transitionStyle: "fade",
+                    //     theme: "owl-theme",
+                    //     singleItem: true
+                    // });
 
 
                     $(".btn-group-control").html("");
@@ -176,6 +176,7 @@
 
         // register the failure function
         dataPromise.fail(function(ex) {
+        console.log("promise fail pass !");
 
         $self.html('');
         $self.html(templateLoadingError(eMessageHaut,eMessageBas,imgerr,eMessagetextColor)); 
