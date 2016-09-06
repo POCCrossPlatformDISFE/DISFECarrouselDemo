@@ -133,12 +133,12 @@
                     }
 
                     //we transform the domElement in string 
-                    carrouselDOM = carrouselDOM.outerHTML;
+                    carrouselDOMStr = carrouselDOM.outerHTML;
                    
-                    carrouselDOM = carrouselDOM.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
-                    carrouselDOM = carrouselDOM.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
+                    carrouselDOMStr = carrouselDOMStr.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
+                    carrouselDOMStr = carrouselDOMStr.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
                   
-                    $self.html('<section class="lp-slider lp-section"><div class="slider-container">+'+carrouselDOM.outerHTML+'+</div></section>');
+                    $self.html('<section class="lp-slider lp-section"><div class="slider-container">+'+carrouselDOMStr+'+</div></section>');
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
 
