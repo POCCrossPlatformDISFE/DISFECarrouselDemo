@@ -121,10 +121,11 @@
                     
                     // console.log(doc);
                     XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", containerFluidNode, null, XPathResult.ANY_TYPE, null);
-
+                    
+                    console.log(XpathResult);
                     var node = XpathResult.iterateNext();
                     while(node) {
-                        console.log(node.id);
+                        console.log(node);
                         node = XpathResult.iterateNext();
                     }
 
