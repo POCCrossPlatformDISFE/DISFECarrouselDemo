@@ -107,8 +107,10 @@
 
                     var doc = new DOMParser().parseFromString(data,'text/xml');
                    
-                    //var html = $.parseHTML(data);
-                
+                    var html = $.parseHTML(data);
+                    console.log(html.getElementById("widget-carousel-content-particulier"));
+
+
                     // html.forEach(function(element) {
                     //     if(element.className){
                     //         if(element.className === 'container-fluid'){
