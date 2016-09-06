@@ -121,6 +121,7 @@
                     
                     html.forEach(function(node) {
                         walkTheDOM(node, function (subNode) {
+                            console.log(subNode.id);
                             console.log(subNode);
                         });
                     }, this);
