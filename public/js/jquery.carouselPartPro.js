@@ -133,11 +133,7 @@
                     }
 
                     xmlDoc = $.parseXML(carrouselDOM);
-
-            
-                    carrouselDOM.forEach(function(element) {
-                        console.log(element);
-                    }, this);
+                               
                     
                     console.log(carrouselDOM.toString());
 
