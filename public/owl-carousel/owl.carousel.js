@@ -1174,6 +1174,7 @@ if (typeof Object.create !== "function") {
                 isBackgroundImg;
 
             if ($lazyImg.prop("tagName") === "DIV") {
+                console.log($lazyImg.data("src"));
                 $lazyImg.css("background-image", "url(" + $lazyImg.data("src") + ")");
                 isBackgroundImg = true;
             } else {

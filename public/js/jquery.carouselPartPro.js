@@ -89,10 +89,8 @@
 
             // ---- AJAX Call ---- //    
             $.ajax({
-
-                // url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D%22https%3A%2F%2Fwww.laposte.fr%2F" + settings.typeUser + "%22%20and%20compat%3D%22html5%22%20and%20xpath%3D'%2F%2Fdiv%5B%40data-slide%5D'&format=xml&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys",
                
-                url : "https://disfelaposte.herokuapp.com/",
+                url : "https://disfelaposte.herokuapp.com/"+settings.typeUser,
                 type: "GET",
                 dataType: "html",
                 cache: true,               
@@ -113,13 +111,7 @@
                         }                      
                     }, this);
 
-                    console.log(containerFluidNode);
-                    
-                    // var xmlString = data
-                    // , parser = new DOMParser()
-                    // , doc = parser.parseFromString(xmlString, "text/xml");
-                    
-                    // console.log(doc);
+
                     XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", containerFluidNode, null, XPathResult.ANY_TYPE, null);
                     
                     var carrouselDOM;
