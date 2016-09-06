@@ -106,9 +106,10 @@
                     , parser = new DOMParser()
                     , doc = parser.parseFromString(xmlString, "text/xml");
                   
-                    console.log(document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.ANY_TYPE, null ));
+                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", doc, null, XPathResult.ANY_TYPE, null ));
 
-
+                    console.log(XpathResult.stringValue);
+                    
                     //Fill div with results
                     var dataFormatted = data;
                     dataFormatted = dataFormatted.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
