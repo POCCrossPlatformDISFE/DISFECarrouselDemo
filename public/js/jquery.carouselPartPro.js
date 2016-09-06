@@ -120,7 +120,7 @@
                     // , doc = parser.parseFromString(xmlString, "text/xml");
                     
                     // console.log(doc);
-                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", document, null, XPathResult.ANY_TYPE, null);
+                    XpathResult = document.evaluate( "//div[@data-lp-slider='full-width']", containerFluidNode, null, XPathResult.ANY_TYPE, null);
 
                     var node = XpathResult.iterateNext();
                     while(node) {
