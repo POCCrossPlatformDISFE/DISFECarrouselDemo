@@ -132,6 +132,15 @@
                         node = XpathResult.iterateNext();
                     }
 
+                    xmlDoc = $.parseXML(carrouselDOM);
+
+            
+                    carrouselDOM.forEach(function(element) {
+                        console.log(element);
+                    }, this);
+                    
+                    console.log(carrouselDOM.toString());
+
                     // //Fill div with results
                     // var dataFormatted = data;
                     // dataFormatted = dataFormatted.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com/');
