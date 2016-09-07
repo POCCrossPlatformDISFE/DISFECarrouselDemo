@@ -107,8 +107,7 @@
                     request.setRequestHeader('Content-Type','text/plain');                  
                 },
                 success: function(data) {
-
-                    console.log(data);
+                                    
 
                     data = data.replace(/src="/g, 'src="https://disfelaposte.herokuapp.com');
                     data = data.replace(/href="\//g, 'href="https://disfelaposte.herokuapp.com/');
@@ -121,18 +120,16 @@
                     var html = $.parseHTML(data);                  
                     
                     html.forEach(function(node) {
-                        var branch = $(node).find('#carousel-'+settings.typeUser);
+                        var branch = $(node).find('.owl-carousel.controlled');
                        if(branch.length >0){
                             carouselDOM = branch[0];
                        }
                     }, this);
                     
-                    console.log(carouselDOM.innerHTML);
-                    console.log($self.html());
-                    $self.html(carouselDOM.innerHTML);
+                    $self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + carouselDOM.innerHTML + '</div></div></section>');
+                    //$self.html(carouselDOM.innerHTML);
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
-                        addClassActive : true,
                         navigation: false, // Show next and prev buttons
                         slideSpeed: 500,
                         paginationSpeed: 400,
