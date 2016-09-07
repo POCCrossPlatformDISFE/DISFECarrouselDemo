@@ -5,7 +5,7 @@ $(document).ready( function() {
 		typeUser:"particulier"
 	});
 
-	$("#widget-carrousel-professionel").carouselPartPro({
-		typeUser:"professionel"
+	$("#widget-carrousel-professionnel").carouselPartPro({
+		typeUser:"professionnel"
 	});		
 });
