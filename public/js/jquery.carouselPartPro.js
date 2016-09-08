@@ -93,7 +93,7 @@
 
             for (key in carouselDOM.children){
 
-                if(carouselDOM.children[key].children[0]){
+                if(carouselDOM.children[key].children.length > 0){
                     console.log(carouselDOM.children[key].children[0].href);
                 }; 
             }           
