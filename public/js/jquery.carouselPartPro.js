@@ -90,9 +90,10 @@
             var whitelist = [
                 ''
             ]           
-           carouselDOM.children.forEach(function(child) {
-               console.log(child.children[0]);
-           }, this);
+           console.log(carouselDOM.children);
+
+            //    child.children[0].href.
+            //    console.log(child.children[0]);
 
 
         }
