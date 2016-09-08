@@ -96,7 +96,7 @@
                 if(carouselDOM.children[key].children){
                     var url = carouselDOM.children[key].children[0].href;
 
-                    console.log(url.split('/')[1]);
+                    console.log(url.split('/'));
                 }; 
             }           
 
