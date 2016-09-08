@@ -89,12 +89,15 @@
             //Getting whitelist site 
             var whitelist = [
                 ''
-            ]           
-           console.log(carouselDOM.children);
+            ]
+
+            for (key in carouselDOM.children){
+                
+                console.log(carouselDOM.children[key]); 
+            }           
 
             //    child.children[0].href.
             //    console.log(child.children[0]);
-
 
         }
 
