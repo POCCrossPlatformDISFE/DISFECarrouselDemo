@@ -92,13 +92,13 @@
             ]
 
             for (key in carouselDOM.children){
-                
-                console.log(carouselDOM.children[key]); 
+                console.log(carouselDOM.children[key].children[0].href); 
             }           
 
             //    child.children[0].href.
             //    console.log(child.children[0]);
-
+            
+            return carouselDOM;
         }
 
         function getData() {
