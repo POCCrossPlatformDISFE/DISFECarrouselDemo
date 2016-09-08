@@ -100,15 +100,16 @@
                         var url = carouselDOM.children[key].children[0].href;
                         var isAvailable = false;
 
-                        whitelist.forEach(function(whiteURL) {       
-                           isAvailable = url.includes(whiteURL)                        
+                        whitelist.forEach(function(whiteURL) {                                   
+                          if(url.indexOf(whiteURL) !== -1){
+                               isAvailable = true
+                          };                       
                         }, this);
 
-                        if(!isAvailable){
-                            console.log("not available : "+url)
+                        if(isAvailable){
+                            console.log("not available : "+url);
                             carouselDOM.children[key].remove();
-                        }
-                    
+                        }                    
                 }; 
             }           
 
@@ -151,7 +152,7 @@
                     
                     var  filteredDOM = filterDomain(carouselDOM); 
 
-                    $self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + filteredDOM + '</div></div></section>');
+                    $self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + filteredDOM.innerHTML + '</div></div></section>');
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
                         navigation: false, // Show next and prev buttons
