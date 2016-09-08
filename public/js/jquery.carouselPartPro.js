@@ -92,12 +92,15 @@
             ]
 
             for (key in carouselDOM.children){
-                console.log(carouselDOM.children[key].children[0].href); 
+
+                if(carouselDOM.children[key].children[0]){
+                    console.log(carouselDOM.children[key].children[0].href);
+                }; 
             }           
 
             //    child.children[0].href.
             //    console.log(child.children[0]);
-            
+
             return carouselDOM;
         }
 
