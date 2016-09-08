@@ -93,8 +93,10 @@
 
             for (key in carouselDOM.children){
 
-                if(carouselDOM.children[key].children.length > 0){
-                    console.log(carouselDOM.children[key].children[0].href);
+                if(carouselDOM.children[key].children){
+                    var url = carouselDOM.children[key].children[0].href;
+
+                    console.log(url.split('/')[1]);
                 }; 
             }           
 
