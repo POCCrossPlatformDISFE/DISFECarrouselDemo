@@ -131,7 +131,7 @@
                        }
                     }, this);
                     
-                    var  filteredDOM = filterDomain(carrouselDOM); 
+                    var  filteredDOM = filterDomain(carouselDOM); 
 
                     $self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + carouselDOM.innerHTML + '</div></div></section>');
 
