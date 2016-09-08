@@ -91,7 +91,7 @@
                 ''
             ]           
            carouselDOM.children.forEach(function(child) {
-               console.log(child);
+               console.log(child.children[0]);
            }, this);
 
 
