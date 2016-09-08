@@ -102,11 +102,11 @@
 
                         whitelist.forEach(function(whiteURL) {                                   
                           if(url.indexOf(whiteURL) !== -1){
-                               isAvailable = true
+                               isAvailable = true;
                           };                       
                         }, this);
 
-                        if(isAvailable){
+                        if(!isAvailable){
                             console.log("not available : "+url);
                             carouselDOM.children[key].remove();
                         }                    
