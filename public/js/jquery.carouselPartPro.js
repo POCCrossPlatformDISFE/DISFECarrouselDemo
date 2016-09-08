@@ -90,7 +90,7 @@
             var whitelist = [
                 'www.lapostemobile.fr',
                 'www.labanquepostale.fr',
-                'boutique.laposte.fr',
+                '',
                 'disfelaposte.herokuapp.com',
 
             ]
@@ -101,10 +101,8 @@
                         var url = carouselDOM.children[key].children[0].href;
                         var isAvailable = false;
 
-                        whitelist.forEach(function(whiteURL) {
-                            if(url.includes(whiteURL)){
-                                 isAvailable =true;     
-                            }                             
+                        whitelist.forEach(function(whiteURL) {       
+                           isAvailable = url.includes(whiteURL)                        
                         }, this);
 
                         if(!isAvailable){
@@ -113,9 +111,6 @@
                     
                 }; 
             }           
-
-            //    child.children[0].href.
-            //    console.log(child.children[0]);
 
             return carouselDOM;
         }
@@ -156,7 +151,7 @@
                     
                     var  filteredDOM = filterDomain(carouselDOM); 
 
-                    $self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + carouselDOM.innerHTML + '</div></div></section>');
+                    $self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + filteredDOM + '</div></div></section>');
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
                         navigation: false, // Show next and prev buttons
