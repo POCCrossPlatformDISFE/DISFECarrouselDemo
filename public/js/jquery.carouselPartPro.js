@@ -88,15 +88,29 @@
             
             //Getting whitelist site 
             var whitelist = [
-                ''
+                'www.lapostemobile.fr',
+                'www.labanquepostale.fr',
+                'boutique.laposte.fr',
+                'disfelaposte.herokuapp.com',
+
             ]
 
             for (key in carouselDOM.children){
-
                 if(carouselDOM.children[key].children){
-                    var url = carouselDOM.children[key].children[0].href;
+                    
+                        var url = carouselDOM.children[key].children[0].href;
+                        var isAvailable = false;
 
-                    console.log(url.split('/'));
+                        whitelist.forEach(function(whiteURL) {
+                            if(url.includes(whiteURL)){
+                                 isAvailable =true;     
+                            }                             
+                        }, this);
+
+                        if(!isAvailable){
+                            carouselDOM.children[key].remove();
+                        }
+                    
                 }; 
             }           
 
