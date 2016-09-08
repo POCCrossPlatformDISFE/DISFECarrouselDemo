@@ -83,13 +83,18 @@
                     </section>';
         }
 
-        function walkTheDOM(node, func) {
-            func(node);
-            node = node.firstChild;
-            while (node) {
-                walkTheDOM(node, func);
-                node = node.nextSibling;
-            }
+        
+        function filterDomain(carrouselDom) {
+            
+            //Getting whitelist site 
+            var whitelist = [
+                ''
+            ]           
+           carouselDOM.children.forEach(function(child) {
+               console.log(child);
+           }, this);
+
+
         }
 
         function getData() {
@@ -126,6 +131,8 @@
                        }
                     }, this);
                     
+                    var  filteredDOM = filterDomain(carrouselDOM); 
+
                     $self.html('<section class="lp-slider lp-section"><div class="slider-container"><div data-lp-slider="full-width" id="widget-carousel-content-' + settings.typeUser + '" class="owl-carousel" >' + carouselDOM.innerHTML + '</div></div></section>');
 
                     $("#widget-carousel-content-" + settings.typeUser).owlCarousel({
