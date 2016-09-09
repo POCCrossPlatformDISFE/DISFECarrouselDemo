@@ -90,7 +90,7 @@
             var whitelist = [
                 'www.lapostemobile.fr',
                 'www.labanquepostale.fr',
-                //'boutique.laposte.fr',
+                'boutique.laposte.fr',
                 'disfelaposte.herokuapp.com',
             ]
 
