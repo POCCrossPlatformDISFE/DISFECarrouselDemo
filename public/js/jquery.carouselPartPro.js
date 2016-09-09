@@ -109,8 +109,7 @@
 
                         if(!isAvailable){
                             console.log("not available : "+url);
-                            carouselDOM = carouselDOM.children[key].remove();
-                            console.log(carouselDOM);
+                            console.log(carouselDOM.children[key].remove());
                         }                    
                 }; 
             }           
