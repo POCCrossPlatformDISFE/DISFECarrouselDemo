@@ -102,13 +102,15 @@
 
                         whitelist.forEach(function(whiteURL) {                                   
                           if(url.indexOf(whiteURL) !== -1){
+                               console.log(url);
                                isAvailable = true;
                           };                       
                         }, this);
 
                         if(!isAvailable){
                             console.log("not available : "+url);
-                            $(carouselDOM.children[key]).remove(); 
+                            $(carouselDOM.children[key]).remove();
+                            console.log($(carouselDOM.children[key])); 
                             console.log(carouselDOM.children[key]);
                         }                    
                 }; 
