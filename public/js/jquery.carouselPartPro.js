@@ -93,6 +93,7 @@
                 // 'boutique.laposte.fr',
                 // 'disfelaposte.herokuapp.com',
             ]
+            var keyToRemove = new Array();
 
             for (key=0; key<carrouselDom.children.length; key++){
                 if(carouselDOM.children[key].children){
@@ -109,10 +110,13 @@
 
                         if(!isAvailable){
                             console.log("not available : "+url);
-                            carrouselDom.children[key].remove();
+                            keyToRemove.push(key);
                         }                    
                 }; 
             }           
+            keyToRemove.forEach(function(k){
+                carrouselDom.children[k].remove();
+            });
 
             return carrouselDom;
         }
