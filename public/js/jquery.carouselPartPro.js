@@ -94,7 +94,7 @@
                 // 'disfelaposte.herokuapp.com',
             ]
 
-            for (key in carouselDOM.children){
+            for (key=0; key<carouselDOM.children.length; key++){
                 if(carouselDOM.children[key].children){
                     
                         var url = carouselDOM.children[key].children[0].href;
