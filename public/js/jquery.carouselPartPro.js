@@ -94,10 +94,10 @@
                 // 'disfelaposte.herokuapp.com',
             ]
 
-            for (key=0; key<carouselDOM.children.length; key++){
+            for (key=0; key<carrouselDom.children.length; key++){
                 if(carouselDOM.children[key].children){
                     
-                        var url = carouselDOM.children[key].children[0].href;
+                        var url = carrouselDom.children[key].children[0].href;
                         var isAvailable = false;
 
                         whitelist.forEach(function(whiteURL) {                                   
@@ -109,13 +109,12 @@
 
                         if(!isAvailable){
                             console.log("not available : "+url);
-                            console.log(key);
-                            carouselDOM.children[key].remove();
+                            carrouselDom.children[key].remove();
                         }                    
                 }; 
             }           
 
-            return carouselDOM;
+            return carrouselDom;
         }
 
         function getData() {
